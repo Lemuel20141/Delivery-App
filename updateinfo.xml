@@ -11,39 +11,41 @@
 <update>
     <!-- Version number in format: Major.Minor.Build.Revision -->
     <!-- This should match the tag version in GitHub releases -->
-    <version>3.5.0.5</version>
+    <version>3.5.0.6</version>
 
     <!-- Direct download URL from GitHub releases -->
     <!-- Format: https://github.com/Lemuel20141/Pryce-Scan-Updates/releases/download/v{version}/Export.Salesbook.exe -->
     <downloadUrl>https://github.com/Lemuel20141/Pryce-Scan-Updates/releases/download/v3.4/Export.Salesbook.exe</downloadUrl>
 
     <!-- Release notes - what's new in this version -->
-    <releaseNotes><![CDATA[Version 3.5.0.5 Release Notes:
+    <releaseNotes><![CDATA[Version 3.5.0.6 Release Notes:
 
 ✨ New Features:
-- Added BORONGAN SALES CENTER and GUIUAN SALES CENTER to all export modules
-- Expanded sales center support across CCS, DSRR, and main forms
+🛠️ Complete System Overview & Architecture
+1. Main Dashboard (Form2) — The Background Controller
+This serves as the silent heart of your backup system.
 
-🐛 Bug Fixes:
-- Fixed auto-detection for newly added sales centers (BORONGAN & GUIUAN)
-- Corrected folder name mapping to properly detect sales centers from folder paths
+Automation: Uses a standard Timer component checking the system clock. It automatically packages and pushes backups twice a day at 8:00 AM and 8:00 PM.
 
-🔧 Improvements:
-- Enhanced CCSExporter with robust error handling and exception management
-- Improved filename sanitization using GUID-based unique naming to prevent file conflicts
-- Implemented STA thread validation for Excel COM interop
-- Added thread-safe progress reporting with SynchronizationContext marshaling
-- Robustified COM object cleanup with proper reference counting
-- Better validation of input parameters in CCSExporter constructor
-- Explicit database provider fallback (ACE OLEDB to VFP OLEDB) with clear error messaging
-- Graceful handling of Excel file format specification (xlsx) and border operations
+Invisible Background Monitoring: When the close (X) or minimize button is clicked, instead of exiting, the window securely hides using a NotifyIcon. It moves to the Windows System Tray (beside the clock) with a notification bubble alert.
 
-🔐 Code Quality:
-- Replaced silent exception swallowing with explicit, meaningful exception handling
-- Added comprehensive validation for product type (LPG vs GASES)
-- Improved desktop path validation with permission error detection
-- Enhanced AutoFit and column width operations with error recovery
-- Better debugging support with detailed exception context
+Restore to Screen: Admin can double-click the application icon in the system tray at any time to bring the control dashboard back to full view.
+
+2. Send Backup Configuration (FormSendBackup) — The Uploader
+Path Management: Allows browsing and defining your local database workspace (e.g., C:\...\BAYBAY 2\ARS) and your cloud-synced Google Drive folder (e.g., G:\My Drive\ARSICS\BAYBAY).
+
+Settings Persistence: Saves configurations permanently across app restarts using the .NET Framework 4.7.2 user settings subsystem (My.Settings.LocalFolderPath and My.Settings.DriveFolderPath).
+
+Manual Backup Button: Allows the Admin to immediately trigger a manual ZIP compilation test on demand without waiting for the automated timer schedule.
+
+Delete Path Button: Provides an optional clear utility with a safety confirmation prompt to instantly erase stored file paths from the system cache.
+
+3. Receive Backup Recovery (FormReceiveBackup) — The Restorer
+Zip Extraction Loop: Implements an archive extraction protocol utilizing the System.IO.Compression library.
+
+File Separation Security: The extractor selectively filters files inside the chosen backup archive, ensuring only .dbf extension files are handled and written to prevent directory clutter or data corruption.
+
+On-Demand Location Overwrite: When Restore is executed, a FolderBrowserDialog allows the Admin to pinpoint exactly where they want to unpack the data, safely displaying a warning dialog before executing a hard overwrite of matching database tables.
 
 Please update to access the new sales centers and benefit from improved robustness and error handling.]]></releaseNotes>
 
