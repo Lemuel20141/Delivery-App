@@ -1,17 +1,12 @@
-v3.50 (77) Highlights:
-•
-🚀 Elite Zoom Controls: Added hardware-aware lens selection for 0.5x (Big Scan) and 0.8x (Wide Scan) on supported devices for capturing large posters or blueprints.
-•
-🎙️ AI Read Aloud: Enabled Ashlee to dictate document text in English or Tagalog using high-quality voice synthesis.
-•
-📂 Smart Auto-Categorization: Integrated AI to automatically detect document types (Receipt, ID, Contract, etc.) and suggest categorized filenames for better organization.
-•
-✍️ Saved Signatures: Implemented signature storage, allowing you to reuse your drawing for faster and more efficient document signing.
-•
-👥 Live User Counter: Added a real-time installation counter in the top-right corner that fetches live data with anti-caching logic.
-•
-📉 Premium PDF Compression: Added a "Small File Size" mode to significantly reduce PDF storage space while maintaining high text clarity.
-•
-🔗 Advanced Link Detection: Upgraded the QR Scanner to automatically identify web URLs and provide one-tap browser redirection with smart protocol handling.
-•
-♿ Accessibility Audit: Performed a full quality pass to fix touch target sizes, add content descriptions, and remove hardcoded strings for professional store standards.
+v3.51 (78) Major Updates:
+•Elite Spatial Reconstruction: A complete overhaul of the PDF-to-Word engine. It now uses Geometry AI to reconstruct document layouts, ensuring that your tables, columns, and signatures stay in their exact physical positions in the Word file.
+
+•Intelligent Sequence Matching: Ashlee has been trained to "read" specific Philippine business forms (BIR 2307, Invoices, Receipts, and Check Vouchers). She now automatically suggests the next sequence number (e.g., CR no. 10 → CR no. 11), saving you significant manual typing time.
+
+•Automatic User Counter: Upgraded the user counter to a live, zero-maintenance API. It now automatically detects new installations and increments the total count without any manual effort on your part.
+
+•Storage Safety Lock: Added a fail-safe that prevents scanning until a storage folder is set up. This ensures that every document you scan is safely saved to the right place immediately.
+
+•High-Fidelity MERGE SYSTEM: Fixed the "COSSTREAM closed" error and optimized memory management, making the PDF merger faster and more reliable for large document sets.
+
+•UI & Accessibility Polish: Moved the AI Voice Toggle to the top-right corner for better ergonomics, fixed over 40+ lint warnings, and ensured every button meets professional touch-target standards.
