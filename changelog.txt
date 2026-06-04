@@ -1,12 +1,10 @@
-v3.51 (78) Major Updates:
-•Elite Spatial Reconstruction: A complete overhaul of the PDF-to-Word engine. It now uses Geometry AI to reconstruct document layouts, ensuring that your tables, columns, and signatures stay in their exact physical positions in the Word file.
-
-•Intelligent Sequence Matching: Ashlee has been trained to "read" specific Philippine business forms (BIR 2307, Invoices, Receipts, and Check Vouchers). She now automatically suggests the next sequence number (e.g., CR no. 10 → CR no. 11), saving you significant manual typing time.
-
-•Automatic User Counter: Upgraded the user counter to a live, zero-maintenance API. It now automatically detects new installations and increments the total count without any manual effort on your part.
-
-•Storage Safety Lock: Added a fail-safe that prevents scanning until a storage folder is set up. This ensures that every document you scan is safely saved to the right place immediately.
-
-•High-Fidelity MERGE SYSTEM: Fixed the "COSSTREAM closed" error and optimized memory management, making the PDF merger faster and more reliable for large document sets.
-
-•UI & Accessibility Polish: Moved the AI Voice Toggle to the top-right corner for better ergonomics, fixed over 40+ lint warnings, and ensured every button meets professional touch-target standards.
+v3.52 (79) Major Updates:
+•
+🎵 Ashlee Music (YouTube Integration): A massive new feature that lets you search and stream Full Songs and Full Albums directly from YouTube. Perfect for office focus!
+•
+📺 Background Play & PiP: Support for Picture-in-Picture mode. You can now minimize the music player into a small floating window and keep listening while you scan documents.
+•
+📜 Natural Reading Order: Upgraded the OCR engine with a spatial sorting algorithm, ensuring that extracted text follows the original document's flow (top-to-bottom, left-to-right).
+•
+⚡ Performance Tuning: Refined background services to maintain a fast and responsive UI even when streaming music and processing large PDFs at the same time.
+Your application is now a complete workstation tool with built-in entertainment! Ready for the new release.
