@@ -22,26 +22,7 @@
 
 ✨ New Features:
 🛠️ Complete System Overview & Architecture
-1. Main Dashboard (Form2) — The Background Controller
-This serves as the silent heart of your backup system.
-
-Automation: Uses a standard Timer component checking the system clock. It automatically packages and pushes backups twice a day at 8:00 AM and 8:00 PM.
-
-Invisible Background Monitoring: When the close (X) or minimize button is clicked, instead of exiting, the window securely hides using a NotifyIcon. It moves to the Windows System Tray (beside the clock) with a notification bubble alert.
-
-Restore to Screen: Admin can double-click the application icon in the system tray at any time to bring the control dashboard back to full view.
-
-2. Send Backup Configuration (FormSendBackup) — The Uploader
-Path Management: Allows browsing and defining your local database workspace (e.g., C:\...\BAYBAY 2\ARS) and your cloud-synced Google Drive folder (e.g., G:\My Drive\ARSICS\BAYBAY).
-
-Settings Persistence: Saves configurations permanently across app restarts using the .NET Framework 4.7.2 user settings subsystem (My.Settings.LocalFolderPath and My.Settings.DriveFolderPath).
-
-Manual Backup Button: Allows the Admin to immediately trigger a manual ZIP compilation test on demand without waiting for the automated timer schedule.
-
-Delete Path Button: Provides an optional clear utility with a safety confirmation prompt to instantly erase stored file paths from the system cache.
-
-3. Receive Backup Recovery (FormReceiveBackup) — The Restorer
-Zip Extraction Loop: Implements an archive extraction protocol utilizing the System.IO.Compression library.
+•	Updated the Release Notes New Features to include the automatic backup schedule change (8 AM, 9 AM, 12 PM, 3 PM, 6 PM, 8 PM) and noted updates
 
 File Separation Security: The extractor selectively filters files inside the chosen backup archive, ensuring only .dbf extension files are handled and written to prevent directory clutter or data corruption.
 
