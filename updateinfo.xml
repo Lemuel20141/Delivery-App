@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <update>
-    <version>3.5.0.32</version>
+    <version>3.5.0.33</version>
     <downloadUrl>https://github.com/Lemuel20141/Delivery-App/releases/download/v3.5/ARSICS.v2.exe</downloadUrl>
-    <releaseNotes><![CDATA[Version 3.5.0.32 Release Notes:
+    <releaseNotes><![CDATA[Version 3.5.0.33 Release Notes:
 
 New Features:
     - Added Backup & Compress utility in Form2 (select files/folders from C:, D:, or Desktop and save to ZIP)
